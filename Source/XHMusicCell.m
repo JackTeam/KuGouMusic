@@ -7,6 +7,7 @@
 //
 
 #import "XHMusicCell.h"
+#import "XHMusic.h"
 
 @interface XHMusicCell ()
 
@@ -25,6 +26,9 @@
         return;
     _music = music;
     // todo
+    self.songNameLabel.text = _music.title;
+    if (_music.artworkImage)
+        self.palugImageView.image = _music.artworkImage;
 }
 
 #pragma mark - life cycle

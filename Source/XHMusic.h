@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+#define kXHArtworkImageWidth 50
+#define kXHArtworkImageHeight 50
+
 @interface XHMusic : NSObject
 
 @property (nonatomic, strong) NSString *artist;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSURL *musicFileURL;
+@property (nonatomic, strong) UIImage *artworkImage;
 
 @end

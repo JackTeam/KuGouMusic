@@ -26,6 +26,14 @@
             music.artist = [item valueForProperty:MPMediaItemPropertyArtist];
             music.title = [item valueForProperty:MPMediaItemPropertyTitle];
             music.musicFileURL = [item valueForProperty:MPMediaItemPropertyAssetURL];
+            MPMediaItemArtwork *artwork =
+            [item valueForProperty: MPMediaItemPropertyArtwork];
+            UIImage *artworkImage =
+            [artwork imageWithSize:CGSizeMake(kXHArtworkImageWidth, kXHArtworkImageHeight)];
+            if (!artworkImage) {
+                artworkImage = [UIImage imageNamed:@"musicCover"];
+            }
+            music.artworkImage = artworkImage;
             [allTracks addObject:music];
         }
         
