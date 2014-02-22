@@ -31,7 +31,7 @@
             UIImage *artworkImage =
             [artwork imageWithSize:CGSizeMake(kXHArtworkImageWidth, kXHArtworkImageHeight)];
             if (!artworkImage) {
-                artworkImage = [UIImage imageNamed:@"musicCover"];
+                artworkImage = [UIImage imageNamed:@"thumb"];
             }
             music.artworkImage = artworkImage;
             [allTracks addObject:music];

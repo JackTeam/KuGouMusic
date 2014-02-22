@@ -37,8 +37,9 @@
     _palugImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
     _palugImageView.backgroundColor = [UIColor grayColor];
     
-    _cheakImageView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) - 30, 0, 30, 30)];
-    _cheakImageView.backgroundColor = [UIColor redColor];
+    _cheakImageView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) - 30, 0, 20, 20)];
+    _cheakImageView.center = CGPointMake(_cheakImageView.center.x, CGRectGetMidY(self.bounds));
+    _cheakImageView.image = [UIImage imageNamed:@"cheak"];
     
     _songNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_palugImageView.frame), 0, CGRectGetWidth([[UIScreen mainScreen] bounds]) - CGRectGetWidth(_palugImageView.frame) - CGRectGetWidth(_cheakImageView.frame), 30)];
     

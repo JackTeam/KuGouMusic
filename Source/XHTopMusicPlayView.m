@@ -43,7 +43,7 @@
     CGFloat thumbImageViewPadding = 3;
     CGFloat thumbImageViewSize = CGRectGetHeight(self.bounds) - (thumbImageViewPadding * 2);
     _thumbImageView = [[UIImageView alloc] initWithFrame:CGRectMake(thumbImageViewPadding, thumbImageViewPadding, thumbImageViewSize, thumbImageViewSize)];
-    _thumbImageView.backgroundColor = [UIColor grayColor];
+    _thumbImageView.image = [UIImage imageNamed:@"thumb"];
     
     CGFloat songNameLabelPaddingX = 8;
     
@@ -57,7 +57,7 @@
     _songNameLabel.text = @"Download the web image not cache to local. 3 days ago";
     
     _arrowImageView = [[UIImageView alloc] initWithFrame:CGRectMake(_songNameLabel.frame.origin.x, CGRectGetMaxY(_songNameLabel.frame), 15, 15)];
-    _arrowImageView.backgroundColor = [UIColor cyanColor];
+    _arrowImageView.image = [UIImage imageNamed:@"arrow"];
     
     _timekeepingLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_arrowImageView.frame) + thumbImageViewPadding, _arrowImageView.frame.origin.y, 100, 20)];
     _timekeepingLabel.font = [UIFont systemFontOfSize:11.0f];
@@ -68,14 +68,14 @@
     
     CGFloat ControlButtonPaddingY = 15;
     _songControlButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_songNameLabel.frame) + buttonPadding, ControlButtonPaddingY, buttonWidth, buttonWidth)];
-    _songControlButton.backgroundColor = [UIColor whiteColor];
     _songControlButton.showsTouchWhenHighlighted = YES;
+    [_songControlButton setBackgroundImage:[UIImage imageNamed:@"stop"] forState:UIControlStateNormal];
     
     CGRect nextSongButtonFrame = _songControlButton.frame;
     nextSongButtonFrame.origin.x += buttonPadding + CGRectGetWidth(nextSongButtonFrame);
     _nextSongButton = [[UIButton alloc] initWithFrame:nextSongButtonFrame];
-    _nextSongButton.backgroundColor = [UIColor whiteColor];
     _nextSongButton.showsTouchWhenHighlighted = YES;
+    [_nextSongButton setBackgroundImage:[UIImage imageNamed:@"next"] forState:UIControlStateNormal];
     
     [self addSubview:self.thumbImageView];
     [self addSubview:self.songNameLabel];
