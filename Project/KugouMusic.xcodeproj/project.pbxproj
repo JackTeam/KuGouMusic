@@ -24,6 +24,7 @@
 		AB8C452118B93F2500053370 /* XHMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C452018B93F2500053370 /* XHMusic.m */; };
 		AB8C452418B93F6800053370 /* XHTopMusicPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C452318B93F6800053370 /* XHTopMusicPlayView.m */; };
 		AB8C452718B93FEA00053370 /* XHMusicPrePlaylistView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C452618B93FEA00053370 /* XHMusicPrePlaylistView.m */; };
+		AB8C452A18B940F200053370 /* XHMusic+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C452918B940F200053370 /* XHMusic+Provider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		AB8C452318B93F6800053370 /* XHTopMusicPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHTopMusicPlayView.m; sourceTree = "<group>"; };
 		AB8C452518B93FEA00053370 /* XHMusicPrePlaylistView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMusicPrePlaylistView.h; sourceTree = "<group>"; };
 		AB8C452618B93FEA00053370 /* XHMusicPrePlaylistView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMusicPrePlaylistView.m; sourceTree = "<group>"; };
+		AB8C452818B940F200053370 /* XHMusic+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XHMusic+Provider.h"; sourceTree = "<group>"; };
+		AB8C452918B940F200053370 /* XHMusic+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XHMusic+Provider.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +201,8 @@
 			children = (
 				AB8C451F18B93F2500053370 /* XHMusic.h */,
 				AB8C452018B93F2500053370 /* XHMusic.m */,
+				AB8C452818B940F200053370 /* XHMusic+Provider.h */,
+				AB8C452918B940F200053370 /* XHMusic+Provider.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				AB8C44F718B93CB800053370 /* AppDelegate.m in Sources */,
 				AB8C451E18B93EE700053370 /* XHMusicCell.m in Sources */,
 				AB8C452718B93FEA00053370 /* XHMusicPrePlaylistView.m in Sources */,
+				AB8C452A18B940F200053370 /* XHMusic+Provider.m in Sources */,
 				AB8C451B18B93E6400053370 /* XHLocalMusicViewController.m in Sources */,
 				AB8C452418B93F6800053370 /* XHTopMusicPlayView.m in Sources */,
 				AB8C44F318B93CB800053370 /* main.m in Sources */,
