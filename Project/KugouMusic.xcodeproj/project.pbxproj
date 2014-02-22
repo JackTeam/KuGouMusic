@@ -20,6 +20,7 @@
 		AB8C450A18B93CB800053370 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB8C450818B93CB800053370 /* InfoPlist.strings */; };
 		AB8C450C18B93CB800053370 /* KugouMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C450B18B93CB800053370 /* KugouMusicTests.m */; };
 		AB8C451B18B93E6400053370 /* XHLocalMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C451A18B93E6400053370 /* XHLocalMusicViewController.m */; };
+		AB8C451E18B93EE700053370 /* XHMusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C451D18B93EE700053370 /* XHMusicCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		AB8C450B18B93CB800053370 /* KugouMusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KugouMusicTests.m; sourceTree = "<group>"; };
 		AB8C451918B93E6400053370 /* XHLocalMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLocalMusicViewController.h; sourceTree = "<group>"; };
 		AB8C451A18B93E6400053370 /* XHLocalMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocalMusicViewController.m; sourceTree = "<group>"; };
+		AB8C451C18B93EE700053370 /* XHMusicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMusicCell.h; sourceTree = "<group>"; };
+		AB8C451D18B93EE700053370 /* XHMusicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMusicCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 		AB8C451618B93DE800053370 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB8C451C18B93EE700053370 /* XHMusicCell.h */,
+				AB8C451D18B93EE700053370 /* XHMusicCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB8C44F718B93CB800053370 /* AppDelegate.m in Sources */,
+				AB8C451E18B93EE700053370 /* XHMusicCell.m in Sources */,
 				AB8C451B18B93E6400053370 /* XHLocalMusicViewController.m in Sources */,
 				AB8C44F318B93CB800053370 /* main.m in Sources */,
 			);
