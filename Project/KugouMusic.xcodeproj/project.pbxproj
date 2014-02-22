@@ -19,6 +19,7 @@
 		AB8C450218B93CB800053370 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8C44EA18B93CB800053370 /* UIKit.framework */; };
 		AB8C450A18B93CB800053370 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB8C450818B93CB800053370 /* InfoPlist.strings */; };
 		AB8C450C18B93CB800053370 /* KugouMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C450B18B93CB800053370 /* KugouMusicTests.m */; };
+		AB8C451B18B93E6400053370 /* XHLocalMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C451A18B93E6400053370 /* XHLocalMusicViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		AB8C450718B93CB800053370 /* KugouMusicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KugouMusicTests-Info.plist"; sourceTree = "<group>"; };
 		AB8C450918B93CB800053370 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AB8C450B18B93CB800053370 /* KugouMusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KugouMusicTests.m; sourceTree = "<group>"; };
+		AB8C451918B93E6400053370 /* XHLocalMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLocalMusicViewController.h; sourceTree = "<group>"; };
+		AB8C451A18B93E6400053370 /* XHLocalMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocalMusicViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 		AB8C451718B93DEF00053370 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AB8C451918B93E6400053370 /* XHLocalMusicViewController.h */,
+				AB8C451A18B93E6400053370 /* XHLocalMusicViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB8C44F718B93CB800053370 /* AppDelegate.m in Sources */,
+				AB8C451B18B93E6400053370 /* XHLocalMusicViewController.m in Sources */,
 				AB8C44F318B93CB800053370 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
