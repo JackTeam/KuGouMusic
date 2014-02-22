@@ -77,6 +77,7 @@
 		AB8C44DA18B93CB800053370 = {
 			isa = PBXGroup;
 			children = (
+				AB8C451518B93DE000053370 /* Source */,
 				AB8C44EC18B93CB800053370 /* KugouMusic */,
 				AB8C450518B93CB800053370 /* KugouMusicTests */,
 				AB8C44E518B93CB800053370 /* Frameworks */,
@@ -142,6 +143,38 @@
 				AB8C450818B93CB800053370 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB8C451518B93DE000053370 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AB8C451818B93DF500053370 /* Models */,
+				AB8C451618B93DE800053370 /* Views */,
+				AB8C451718B93DEF00053370 /* Controllers */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
+		AB8C451618B93DE800053370 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AB8C451718B93DEF00053370 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AB8C451818B93DF500053370 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +476,7 @@
 				AB8C451118B93CB800053370 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB8C451218B93CB800053370 /* Build configuration list for PBXNativeTarget "KugouMusicTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +485,7 @@
 				AB8C451418B93CB800053370 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
