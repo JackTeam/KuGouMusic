@@ -10,6 +10,17 @@
 
 @implementation XHMusicCell
 
+#pragma mark - Propertys
+
+- (void)setMusic:(XHMusic *)music {
+    if (_music == music)
+        return;
+    _music = music;
+    // todo
+}
+
+#pragma mark - life cycle
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

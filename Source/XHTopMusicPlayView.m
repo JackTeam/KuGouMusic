@@ -10,6 +10,17 @@
 
 @implementation XHTopMusicPlayView
 
+#pragma mark - Propertys
+
+- (void)setMusic:(XHMusic *)music {
+    if (_music == music)
+        return;
+    _music = music;
+    // todo
+}
+
+#pragma mark - life cycle
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
