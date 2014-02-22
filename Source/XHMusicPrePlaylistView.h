@@ -12,7 +12,7 @@
 
 @interface XHMusicPrePlaylistView : UIView
 
-@property (nonatomic, strong) NSArray *playLists;
+@property (nonatomic, strong) NSArray *prePlayLists;
 
 + (instancetype)shareMusicPrePlaylistView;
 
