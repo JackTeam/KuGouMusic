@@ -9,5 +9,5 @@
 #import "XHMusic.h"
 
 @interface XHMusic (Provider)
-
++ (NSArray *)localLibraryMusicsWithRandom:(BOOL)isRandom;
 @end
