@@ -8,11 +8,35 @@
 
 #import "XHLocalMusicViewController.h"
 
-@interface XHLocalMusicViewController ()
+#import "XHMusicCell.h"
+#import "XHMusic+Provider.h"
+
+@interface XHLocalMusicViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) NSArray *everythingMusics;
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
 @implementation XHLocalMusicViewController
+
+#pragma mark - Propertys
+
+- (void)setEverythingMusics:(NSArray *)everythingMusics {
+    _everythingMusics = everythingMusics;
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        [self.view addSubview:_tableView];
+        [self.view sendSubviewToBack:_tableView];
+    }
+    return _tableView;
+}
 
 #pragma mark - Life cycle
 
@@ -28,8 +52,21 @@
     return self;
 }
 
+- (void)_loadEverythingMusics {
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_queue_create("Load local music", NULL), ^{
+        NSArray *everythingMusics = [XHMusic localLibraryMusicsWithRandom:NO];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            weakSelf.everythingMusics = everythingMusics;
+            [weakSelf.tableView reloadData];
+        });
+    });
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    [self _loadEverythingMusics];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -54,6 +91,35 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITableView DataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.everythingMusics.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"musicCellIdentifier";
+    XHMusicCell *musicCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!musicCell) {
+        musicCell = [[XHMusicCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    XHMusic *music = self.everythingMusics[indexPath.row];
+    musicCell.music = music;
+    
+    return musicCell;
+}
+
+#pragma mark - UITableView delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
 }
 
 @end
