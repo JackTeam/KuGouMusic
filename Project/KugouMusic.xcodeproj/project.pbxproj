@@ -21,6 +21,7 @@
 		AB8C450C18B93CB800053370 /* KugouMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C450B18B93CB800053370 /* KugouMusicTests.m */; };
 		AB8C451B18B93E6400053370 /* XHLocalMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C451A18B93E6400053370 /* XHLocalMusicViewController.m */; };
 		AB8C451E18B93EE700053370 /* XHMusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C451D18B93EE700053370 /* XHMusicCell.m */; };
+		AB8C452118B93F2500053370 /* XHMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C452018B93F2500053370 /* XHMusic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		AB8C451A18B93E6400053370 /* XHLocalMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocalMusicViewController.m; sourceTree = "<group>"; };
 		AB8C451C18B93EE700053370 /* XHMusicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMusicCell.h; sourceTree = "<group>"; };
 		AB8C451D18B93EE700053370 /* XHMusicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMusicCell.m; sourceTree = "<group>"; };
+		AB8C451F18B93F2500053370 /* XHMusic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMusic.h; sourceTree = "<group>"; };
+		AB8C452018B93F2500053370 /* XHMusic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMusic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +186,8 @@
 		AB8C451818B93DF500053370 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AB8C451F18B93F2500053370 /* XHMusic.h */,
+				AB8C452018B93F2500053370 /* XHMusic.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8C452118B93F2500053370 /* XHMusic.m in Sources */,
 				AB8C44F718B93CB800053370 /* AppDelegate.m in Sources */,
 				AB8C451E18B93EE700053370 /* XHMusicCell.m in Sources */,
 				AB8C451B18B93E6400053370 /* XHLocalMusicViewController.m in Sources */,
