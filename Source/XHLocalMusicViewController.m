@@ -11,6 +11,9 @@
 #import "XHMusicCell.h"
 #import "XHMusic+Provider.h"
 
+#import "XHTopMusicPlayView.h"
+#import "XHMusicPrePlaylistView.h"
+
 @interface XHLocalMusicViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSArray *everythingMusics;
@@ -25,6 +28,7 @@
 
 - (void)setEverythingMusics:(NSArray *)everythingMusics {
     _everythingMusics = everythingMusics;
+    [XHMusicPrePlaylistView shareMusicPrePlaylistView].prePlayLists = self.everythingMusics;
 }
 
 - (UITableView *)tableView {
@@ -63,10 +67,15 @@
     });
 }
 
+- (void)_showPlayListView {
+    [[XHMusicPrePlaylistView shareMusicPrePlaylistView] show];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     [self _loadEverythingMusics];
+    [self _showPlayListView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -85,6 +94,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    XHTopMusicPlayView *topMediaPlayView = [XHTopMusicPlayView shareTopMusicPlayView];
+    CGRect topMediaPlayViewFrame = topMediaPlayView.frame;
+    topMediaPlayViewFrame.origin.y = CGRectGetHeight(self.view.bounds) - kXHTopMediaPlayViewHeight;
+    topMediaPlayView.frame = topMediaPlayViewFrame;
+    [self.view addSubview:topMediaPlayView];
+    
+    XHMusicPrePlaylistView *playListView = [XHMusicPrePlaylistView shareMusicPrePlaylistView];
+    [self.view insertSubview:playListView belowSubview:topMediaPlayView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -119,7 +136,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    [[XHTopMusicPlayView shareTopMusicPlayView] setMusic:self.everythingMusics[indexPath.row]];
 }
 
 @end
