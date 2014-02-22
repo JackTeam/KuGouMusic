@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class XHMusic;
+
 @interface XHMusicCell : UITableViewCell
+
+@property (nonatomic, strong) XHMusic *music;
 
 @end

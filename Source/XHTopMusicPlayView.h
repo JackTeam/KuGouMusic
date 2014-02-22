@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class XHMusic;
+
 @interface XHTopMusicPlayView : UIView
+
+@property (nonatomic, strong) XHMusic *music;
 
 @end
