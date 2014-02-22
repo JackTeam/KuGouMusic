@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#define kXHTopMediaPlayViewHeight 58
+
 @class XHMusic;
 
 @interface XHTopMusicPlayView : UIView
 
 @property (nonatomic, strong) XHMusic *music;
+
++ (instancetype)shareTopMusicPlayView;
 
 @end
