@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class XHMusic;
+
 @interface XHMusicPrePlaylistView : UIView
+
+@property (nonatomic, strong) NSArray *playLists;
+
++ (instancetype)shareMusicPrePlaylistView;
+
+- (void)show;
+- (void)hide;
+
+- (BOOL)addSongToList:(XHMusic *)music;
 
 @end
