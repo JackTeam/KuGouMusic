@@ -26,6 +26,8 @@
 		AB8C452718B93FEA00053370 /* XHMusicPrePlaylistView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C452618B93FEA00053370 /* XHMusicPrePlaylistView.m */; };
 		AB8C452A18B940F200053370 /* XHMusic+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C452918B940F200053370 /* XHMusic+Provider.m */; };
 		ABB55ABC18B9753F002F3CFC /* XHSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB55ABB18B9753F002F3CFC /* XHSoundManager.m */; };
+		ABB55ABE18B97830002F3CFC /* 情非得已.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ABB55ABD18B97830002F3CFC /* 情非得已.mp3 */; };
+		ABB55AC018B9792E002F3CFC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB55ABF18B9792E002F3CFC /* AVFoundation.framework */; };
 		ABC1F51718B95F94000242E2 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC1F51018B95F94000242E2 /* arrow@2x.png */; };
 		ABC1F51818B95F94000242E2 /* cheak@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC1F51118B95F94000242E2 /* cheak@2x.png */; };
 		ABC1F51918B95F94000242E2 /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC1F51218B95F94000242E2 /* next@2x.png */; };
@@ -76,6 +78,8 @@
 		AB8C452918B940F200053370 /* XHMusic+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XHMusic+Provider.m"; sourceTree = "<group>"; };
 		ABB55ABA18B9753F002F3CFC /* XHSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSoundManager.h; sourceTree = "<group>"; };
 		ABB55ABB18B9753F002F3CFC /* XHSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSoundManager.m; sourceTree = "<group>"; };
+		ABB55ABD18B97830002F3CFC /* 情非得已.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "情非得已.mp3"; sourceTree = "<group>"; };
+		ABB55ABF18B9792E002F3CFC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		ABC1F51018B95F94000242E2 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		ABC1F51118B95F94000242E2 /* cheak@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cheak@2x.png"; sourceTree = "<group>"; };
 		ABC1F51218B95F94000242E2 /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB55AC018B9792E002F3CFC /* AVFoundation.framework in Frameworks */,
 				AB8C44E918B93CB800053370 /* CoreGraphics.framework in Frameworks */,
 				AB8C44EB18B93CB800053370 /* UIKit.framework in Frameworks */,
 				AB8C44E718B93CB800053370 /* Foundation.framework in Frameworks */,
@@ -132,6 +137,7 @@
 		AB8C44E518B93CB800053370 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABB55ABF18B9792E002F3CFC /* AVFoundation.framework */,
 				AB8C44E618B93CB800053370 /* Foundation.framework */,
 				AB8C44E818B93CB800053370 /* CoreGraphics.framework */,
 				AB8C44EA18B93CB800053370 /* UIKit.framework */,
@@ -154,6 +160,7 @@
 		AB8C44ED18B93CB800053370 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ABB55ABD18B97830002F3CFC /* 情非得已.mp3 */,
 				AB8C44EE18B93CB800053370 /* KugouMusic-Info.plist */,
 				AB8C44EF18B93CB800053370 /* InfoPlist.strings */,
 				AB8C44F218B93CB800053370 /* main.m */,
@@ -326,6 +333,7 @@
 			files = (
 				AB8C44F118B93CB800053370 /* InfoPlist.strings in Resources */,
 				ABC1F51C18B95F94000242E2 /* thumb@2x.png in Resources */,
+				ABB55ABE18B97830002F3CFC /* 情非得已.mp3 in Resources */,
 				ABC1F51818B95F94000242E2 /* cheak@2x.png in Resources */,
 				AB8C44F918B93CB800053370 /* Images.xcassets in Resources */,
 				ABC1F51D18B95F94000242E2 /* topMusicBackgroundImage@2x.png in Resources */,

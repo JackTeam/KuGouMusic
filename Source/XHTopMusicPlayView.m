@@ -31,6 +31,7 @@
         return;
     _music = music;
     // todo
+    [[XHSoundManager sharedSoundManager] playMusic:[Sound soundWithContentsOfURL:_music.musicFileURL] looping:YES fadeIn:YES];
     self.songNameLabel.text = _music.title;
     self.thumbImageView.image = _music.artworkImage;
 }

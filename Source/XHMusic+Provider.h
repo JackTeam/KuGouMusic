@@ -9,5 +9,6 @@
 #import "XHMusic.h"
 
 @interface XHMusic (Provider)
++ (NSArray *)boundleMusics;
 + (NSArray *)localLibraryMusicsWithRandom:(BOOL)isRandom;
 @end
