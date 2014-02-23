@@ -1,3 +1,4 @@
+![image](https://github.com/JackTeam/XHImageViewer/raw/master/Screenshots/KuGouMusic.gif)
 KuGouMusic
 ==========
 
