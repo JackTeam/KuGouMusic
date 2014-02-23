@@ -25,6 +25,7 @@
 		AB8C452418B93F6800053370 /* XHTopMusicPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C452318B93F6800053370 /* XHTopMusicPlayView.m */; };
 		AB8C452718B93FEA00053370 /* XHMusicPrePlaylistView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C452618B93FEA00053370 /* XHMusicPrePlaylistView.m */; };
 		AB8C452A18B940F200053370 /* XHMusic+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C452918B940F200053370 /* XHMusic+Provider.m */; };
+		ABA0BFF418BA29B000B9D0F0 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA0BFF318BA29B000B9D0F0 /* play@2x.png */; };
 		ABB55ABC18B9753F002F3CFC /* XHSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB55ABB18B9753F002F3CFC /* XHSoundManager.m */; };
 		ABB55ABE18B97830002F3CFC /* 情非得已.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ABB55ABD18B97830002F3CFC /* 情非得已.mp3 */; };
 		ABB55AC018B9792E002F3CFC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB55ABF18B9792E002F3CFC /* AVFoundation.framework */; };
@@ -76,6 +77,7 @@
 		AB8C452618B93FEA00053370 /* XHMusicPrePlaylistView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMusicPrePlaylistView.m; sourceTree = "<group>"; };
 		AB8C452818B940F200053370 /* XHMusic+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XHMusic+Provider.h"; sourceTree = "<group>"; };
 		AB8C452918B940F200053370 /* XHMusic+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XHMusic+Provider.m"; sourceTree = "<group>"; };
+		ABA0BFF318BA29B000B9D0F0 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		ABB55ABA18B9753F002F3CFC /* XHSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSoundManager.h; sourceTree = "<group>"; };
 		ABB55ABB18B9753F002F3CFC /* XHSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSoundManager.m; sourceTree = "<group>"; };
 		ABB55ABD18B97830002F3CFC /* 情非得已.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "情非得已.mp3"; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 		ABC1F50F18B95F94000242E2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ABA0BFF318BA29B000B9D0F0 /* play@2x.png */,
 				ABC1F51018B95F94000242E2 /* arrow@2x.png */,
 				ABC1F51118B95F94000242E2 /* cheak@2x.png */,
 				ABC1F51218B95F94000242E2 /* next@2x.png */,
@@ -339,6 +342,7 @@
 				ABC1F51D18B95F94000242E2 /* topMusicBackgroundImage@2x.png in Resources */,
 				ABC1F51918B95F94000242E2 /* next@2x.png in Resources */,
 				ABC1F51718B95F94000242E2 /* arrow@2x.png in Resources */,
+				ABA0BFF418BA29B000B9D0F0 /* play@2x.png in Resources */,
 				ABC1F51A18B95F94000242E2 /* plat@2x.png in Resources */,
 				ABC1F51B18B95F94000242E2 /* stop@2x.png in Resources */,
 			);

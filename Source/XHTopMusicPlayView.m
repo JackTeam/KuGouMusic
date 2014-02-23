@@ -20,26 +20,45 @@
 @property (nonatomic, strong) UIButton *songControlButton;
 @property (nonatomic, strong) UIButton *nextSongButton;
 
+@property (nonatomic, strong) Sound *sound;
+
 @end
 
 @implementation XHTopMusicPlayView
 
 #pragma mark - Propertys
 
+- (Sound *)sound {
+    if (!_sound) {
+        _sound = [[Sound alloc] initWithContentsOfURL:self.music.musicFileURL];
+    }
+    return _sound;
+}
+
 - (void)setMusic:(XHMusic *)music {
     if (_music == music)
         return;
     _music = music;
     // todo
-    [[XHSoundManager sharedSoundManager] playMusic:[Sound soundWithContentsOfURL:_music.musicFileURL] looping:YES fadeIn:YES];
+    [[XHSoundManager sharedSoundManager] playMusic:self.sound looping:YES fadeIn:NO];
     self.songNameLabel.text = _music.title;
     self.thumbImageView.image = _music.artworkImage;
+}
+
+#pragma mark - Action
+
+- (void)stopMusicClicked:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    if (self.sound.playing)
+        [[XHSoundManager sharedSoundManager] stopSound:self.sound fadeOut:NO];
+    else
+        [[XHSoundManager sharedSoundManager] playSound:self.sound looping:YES fadeIn:NO];
 }
 
 #pragma mark - life cycle
 
 - (void)_setup {
-    self.backgroundColor = [UIColor blackColor];
+    self.backgroundColor = [UIColor colorWithWhite:0.118 alpha:1.000];
     
     CGFloat thumbImageViewPadding = 3;
     CGFloat thumbImageViewSize = CGRectGetHeight(self.bounds) - (thumbImageViewPadding * 2);
@@ -67,10 +86,12 @@
     
     _songPlaybackProgress = [[UIProgressView alloc] initWithFrame:CGRectMake(_songNameLabel.frame.origin.x, CGRectGetMaxY(_timekeepingLabel.frame), CGRectGetWidth(self.bounds) - songNameLabelX - thumbImageViewPadding, 2)];
     
-    CGFloat ControlButtonPaddingY = 15;
-    _songControlButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_songNameLabel.frame) + buttonPadding, ControlButtonPaddingY, buttonWidth, buttonWidth)];
+    CGFloat controlButtonPaddingY = 15;
+    _songControlButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_songNameLabel.frame) + buttonPadding, controlButtonPaddingY, buttonWidth, buttonWidth)];
+    [_songControlButton addTarget:self action:@selector(stopMusicClicked:) forControlEvents:UIControlEventTouchUpInside];
     _songControlButton.showsTouchWhenHighlighted = YES;
     [_songControlButton setBackgroundImage:[UIImage imageNamed:@"stop"] forState:UIControlStateNormal];
+    [_songControlButton setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateSelected];
     
     CGRect nextSongButtonFrame = _songControlButton.frame;
     nextSongButtonFrame.origin.x += buttonPadding + CGRectGetWidth(nextSongButtonFrame);

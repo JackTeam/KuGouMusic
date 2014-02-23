@@ -59,7 +59,7 @@
 - (void)_loadEverythingMusics {
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_queue_create("Load local music", NULL), ^{
-        NSArray *everythingMusics = [XHMusic localLibraryMusicsWithRandom:NO];
+        NSArray *everythingMusics = [XHMusic boundleMusics];
         dispatch_async(dispatch_get_main_queue(), ^{
             weakSelf.everythingMusics = everythingMusics;
             [weakSelf.tableView reloadData];
