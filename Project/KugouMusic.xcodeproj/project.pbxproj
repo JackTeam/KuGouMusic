@@ -25,6 +25,7 @@
 		AB8C452418B93F6800053370 /* XHTopMusicPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C452318B93F6800053370 /* XHTopMusicPlayView.m */; };
 		AB8C452718B93FEA00053370 /* XHMusicPrePlaylistView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C452618B93FEA00053370 /* XHMusicPrePlaylistView.m */; };
 		AB8C452A18B940F200053370 /* XHMusic+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C452918B940F200053370 /* XHMusic+Provider.m */; };
+		ABB55ABC18B9753F002F3CFC /* XHSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB55ABB18B9753F002F3CFC /* XHSoundManager.m */; };
 		ABC1F51718B95F94000242E2 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC1F51018B95F94000242E2 /* arrow@2x.png */; };
 		ABC1F51818B95F94000242E2 /* cheak@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC1F51118B95F94000242E2 /* cheak@2x.png */; };
 		ABC1F51918B95F94000242E2 /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC1F51218B95F94000242E2 /* next@2x.png */; };
@@ -73,6 +74,8 @@
 		AB8C452618B93FEA00053370 /* XHMusicPrePlaylistView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMusicPrePlaylistView.m; sourceTree = "<group>"; };
 		AB8C452818B940F200053370 /* XHMusic+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XHMusic+Provider.h"; sourceTree = "<group>"; };
 		AB8C452918B940F200053370 /* XHMusic+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XHMusic+Provider.m"; sourceTree = "<group>"; };
+		ABB55ABA18B9753F002F3CFC /* XHSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSoundManager.h; sourceTree = "<group>"; };
+		ABB55ABB18B9753F002F3CFC /* XHSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSoundManager.m; sourceTree = "<group>"; };
 		ABC1F51018B95F94000242E2 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		ABC1F51118B95F94000242E2 /* cheak@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cheak@2x.png"; sourceTree = "<group>"; };
 		ABC1F51218B95F94000242E2 /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
@@ -180,6 +183,7 @@
 		AB8C451518B93DE000053370 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				ABB55AB918B97529002F3CFC /* Common */,
 				ABC1F50F18B95F94000242E2 /* Resources */,
 				AB8C451818B93DF500053370 /* Models */,
 				AB8C451618B93DE800053370 /* Views */,
@@ -220,6 +224,15 @@
 				AB8C452918B940F200053370 /* XHMusic+Provider.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		ABB55AB918B97529002F3CFC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ABB55ABA18B9753F002F3CFC /* XHSoundManager.h */,
+				ABB55ABB18B9753F002F3CFC /* XHSoundManager.m */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		ABC1F50F18B95F94000242E2 /* Resources */ = {
@@ -339,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB8C452118B93F2500053370 /* XHMusic.m in Sources */,
+				ABB55ABC18B9753F002F3CFC /* XHSoundManager.m in Sources */,
 				AB8C44F718B93CB800053370 /* AppDelegate.m in Sources */,
 				AB8C451E18B93EE700053370 /* XHMusicCell.m in Sources */,
 				AB8C452718B93FEA00053370 /* XHMusicPrePlaylistView.m in Sources */,
