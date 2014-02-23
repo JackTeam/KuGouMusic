@@ -9,8 +9,9 @@
 #import "XHMusicPrePlaylistView.h"
 
 #import "XHMusic.h"
+#import "XHTopMusicPlayView.h"
 
-@interface XHMusicPrePlaylistView () <UITableViewDelegate, UITableViewDataSource>
+@interface XHMusicPrePlaylistView () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, strong) UILabel *prePlaylistLabel;
@@ -61,7 +62,8 @@
     }];
 }
 
-- (void)show {
+- (void)showFormView:(UIView *)fromView inView:(UIView *)inView {
+    [inView insertSubview:self belowSubview:fromView];
     [self _controlContainerViewDisplay:YES];
 }
 
@@ -77,6 +79,7 @@
     self.alpha = 0.;
     self.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.3];
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureRecognizerHandle:)];
+    tapGestureRecognizer.delegate = self;
     [self addGestureRecognizer:tapGestureRecognizer];
     
     if (!_prePlayLists) {
@@ -102,7 +105,6 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_containerView addSubview:_tableView];
-        [_containerView sendSubviewToBack:_tableView];
     }
 }
 
@@ -156,7 +158,18 @@
 #pragma mark - UITableView delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [[XHTopMusicPlayView shareTopMusicPlayView] setMusic:self.prePlayLists[indexPath.row]];
+}
 
+#pragma mark - UIGesture
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    NSLog(@"%@", gestureRecognizer.view);
+    if ([gestureRecognizer.view isKindOfClass:[UITableView class]]) {
+        return NO;
+    } else {
+        return YES;
+    }
 }
 
 @end

@@ -110,6 +110,14 @@
     [self addSubview:self.nextSongButton];
 }
 
+- (void)showInView:(UIView *)inView {
+    XHTopMusicPlayView *topMediaPlayView = [XHTopMusicPlayView shareTopMusicPlayView];
+    CGRect topMediaPlayViewFrame = topMediaPlayView.frame;
+    topMediaPlayViewFrame.origin.y = CGRectGetHeight(inView.bounds) - kXHTopMediaPlayViewHeight;
+    topMediaPlayView.frame = topMediaPlayViewFrame;
+    [inView addSubview:topMediaPlayView];
+}
+
 + (instancetype)shareTopMusicPlayView {
     static XHTopMusicPlayView *topMusicPlayView;
     static dispatch_once_t onceToken;

@@ -36,6 +36,9 @@
         _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        UIEdgeInsets contentInset = _tableView.contentInset;
+        contentInset.top = 64;
+        _tableView.contentInset = contentInset;
         [self.view addSubview:_tableView];
         [self.view sendSubviewToBack:_tableView];
     }
@@ -68,7 +71,7 @@
 }
 
 - (void)_showPlayListView {
-    [[XHMusicPrePlaylistView shareMusicPrePlaylistView] show];
+    [[XHMusicPrePlaylistView shareMusicPrePlaylistView] showFormView:[XHTopMusicPlayView shareTopMusicPlayView] inView:self.navigationController.view];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -94,14 +97,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    XHTopMusicPlayView *topMediaPlayView = [XHTopMusicPlayView shareTopMusicPlayView];
-    CGRect topMediaPlayViewFrame = topMediaPlayView.frame;
-    topMediaPlayViewFrame.origin.y = CGRectGetHeight(self.view.bounds) - kXHTopMediaPlayViewHeight;
-    topMediaPlayView.frame = topMediaPlayViewFrame;
-    [self.view addSubview:topMediaPlayView];
+    self.title = @"本地音乐";
     
-    XHMusicPrePlaylistView *playListView = [XHMusicPrePlaylistView shareMusicPrePlaylistView];
-    [self.view insertSubview:playListView belowSubview:topMediaPlayView];
+    [[XHTopMusicPlayView shareTopMusicPlayView] showInView:self.navigationController.view];
 }
 
 - (void)didReceiveMemoryWarning

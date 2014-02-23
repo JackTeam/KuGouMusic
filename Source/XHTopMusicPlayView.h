@@ -18,4 +18,6 @@
 
 + (instancetype)shareTopMusicPlayView;
 
+- (void)showInView:(UIView *)inView;
+
 @end

@@ -16,7 +16,7 @@
 
 + (instancetype)shareMusicPrePlaylistView;
 
-- (void)show;
+- (void)showFormView:(UIView *)fromView inView:(UIView *)inView;
 - (void)hide;
 
 - (BOOL)addSongToList:(XHMusic *)music;

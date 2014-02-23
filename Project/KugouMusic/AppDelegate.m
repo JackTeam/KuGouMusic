@@ -17,7 +17,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [self _setupRootViewController:[[XHLocalMusicViewController alloc] init]];
+    [self _setupRootViewController:[[UINavigationController alloc] initWithRootViewController:[[XHLocalMusicViewController alloc] init]]];
     [self.window makeKeyAndVisible];
     return YES;
 }
