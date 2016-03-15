@@ -497,6 +497,7 @@
 				GCC_PREFIX_HEADER = "KugouMusic/KugouMusic-Prefix.pch";
 				INFOPLIST_FILE = "KugouMusic/KugouMusic-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HUAJIE.KugouMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -512,6 +513,7 @@
 				GCC_PREFIX_HEADER = "KugouMusic/KugouMusic-Prefix.pch";
 				INFOPLIST_FILE = "KugouMusic/KugouMusic-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HUAJIE.KugouMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
